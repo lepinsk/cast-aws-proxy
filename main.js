@@ -20,7 +20,7 @@ var forcedHeaders	= require("./forced-headers.json");
 
 var proxy = httpProxy.createProxyServer({});
 var server = http.createServer(function(req, res) {
-  proxy.web(req, res, { target: targetURI, secure: true });
+  proxy.web(req, res, { target: targetURI, secure: false });
 });
 
 server.listen(process.env.PORT);
