@@ -18,6 +18,7 @@ var forcedHeaders	= require("./forced-headers.json");
 
 var proxy = httpProxy.createProxyServer({});
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
+  console.log(req.url);
   for (var i in forcedHeaders) res.setHeader(i, forcedHeaders[i]);
 });
 
