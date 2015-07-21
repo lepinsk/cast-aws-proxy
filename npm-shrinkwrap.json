@@ -1,0 +1,23 @@
+{
+  "name": "cast-aws-proxy",
+  "version": "1.0.0",
+  "dependencies": {
+    "http-proxy": {
+      "version": "1.11.1",
+      "from": "http-proxy@*",
+      "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.11.1.tgz",
+      "dependencies": {
+        "eventemitter3": {
+          "version": "1.1.1",
+          "from": "eventemitter3@>=1.0.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.1.1.tgz"
+        },
+        "requires-port": {
+          "version": "0.0.1",
+          "from": "requires-port@>=0.0.0 <1.0.0",
+          "resolved": "https://registry.npmjs.org/requires-port/-/requires-port-0.0.1.tgz"
+        }
+      }
+    }
+  }
+}

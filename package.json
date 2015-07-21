@@ -1,0 +1,14 @@
+{
+  "name": "cast-aws-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Lepinski",
+  "license": "ISC",
+  "dependencies": {
+    "http-proxy": "1.11.1"
+  }
+}
