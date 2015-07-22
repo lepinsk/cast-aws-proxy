@@ -1,4 +1,5 @@
 {
 	"Access-Control-Allow-Origin": "*",
-	"Vary": "Origin"
+	"Vary": "Origin",
+	"x-cast-aws-proxy": "heckyes"
 }
