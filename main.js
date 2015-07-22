@@ -10,17 +10,16 @@ if (!process.env.PORT){
 console.log("");
 console.log("cast-aws-proxy starting up...");
 
-var http          = require("http");
-var httpProxy		  = require("http-proxy");
+var http			= require("http");
+var httpProxy		= require("http-proxy");
 
-var targetURI		  = process.env.ORIGIN_URI;
+var targetURI		= process.env.ORIGIN_URI;
 var forcedHeaders	= require("./forced-headers.json");
 
 var proxy = httpProxy.createProxyServer({});
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
-  console.log(req.url);
+  console.dir(proxyReq);
   for (var i in forcedHeaders) res.setHeader(i, forcedHeaders[i]);
-  console.dir(res);
 });
 
 console.log("forced headers follow:");
