@@ -9,6 +9,7 @@
   "author": "Julian Lepinski",
   "license": "ISC",
   "dependencies": {
-    "http-proxy": "1.11.1"
+    "express": "^4.13.1",
+    "request": "^2.60.0"
   }
 }
