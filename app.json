@@ -16,6 +16,11 @@
 		"ORIGIN_URI": {
 			"description": "The origin your Cloudfront requests should be made against (likely your S3 bucket URL)",
 			"value": ""
+		},
+		"REMOTE_FORCED_HEADERS": {
+			"description": "(Optional) A url to an externally-hosted forced-headers.json file",
+			"value": null,
+			"required": false
 		}
 	}
 }

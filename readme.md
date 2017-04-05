@@ -29,4 +29,16 @@ The server definitely won't start if these aren't present.
 * ```OVERWRITE_EXISTING```: true if present; this will set headers from ```forced-headers.json``` even if the response already contains the same header
 * ```REMOTE_FORCED_HEADERS```: a URL to a remote ```forced-headers.json``` file, which will take priority over the local ```forced-headers.json``` file and be loaded at run-time
 
-```forced-headers.json``` is your header configuration file.
+#### Forced headers
+
+```forced-headers.json``` is your header configuration file; the headers as defined in this file will be appended to each request proxied through this server. (By default, they won't overwrite preexisting headers if a matching header is *already* present; the ```OVERWRITE_EXISTING``` environment variable changes this behaviour) Here's the contents of the ```forced-headers.json``` file found in the root of this project:
+
+```js
+{
+	"Access-Control-Allow-Origin": "*",
+	"Vary": "Origin",
+	"x-cast-aws-proxy": "heckyeah"
+}
+```
+
+By default the server will load these values from the ```forced-headers.json``` file found in the project root. If you'd like to host this file elsewhere (useful for a one-click deploy on Heroku), add a ```REMOTE_FORCED_HEADERS``` environment variable that contains a URL to your remote headers file.
