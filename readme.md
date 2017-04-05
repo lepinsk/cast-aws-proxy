@@ -8,7 +8,7 @@ CloudFront caches the first reponse it gets when it gets a cache miss. This is [
 
 ## How do I use this?
 
-1. Deploy this server to Heroku
+1. Deploy this server to Heroku → [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 2. Configure your ```ORIGIN_URI``` environment variable, and any other optional variables as needed
 3. Point your Cloudfront bucket to your Heroku server URL instead of your S3 url
 
