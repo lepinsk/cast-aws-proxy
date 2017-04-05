@@ -26,7 +26,7 @@ if (!targetURI) {
 	process.exit(1);
 }
 
-if (remoteHeaders) {
+if (remoteHeaders && process.env.REMOTE_FORCED_HEADERS.trim() !== "") {
 	var remoteHeaderURL = process.env.REMOTE_FORCED_HEADERS;
 	console.log("[config] loading remote headers from " + remoteHeaderURL);
 	request(remoteHeaderURL, function (error, response, body) {

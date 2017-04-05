@@ -27,7 +27,7 @@ The server definitely won't start if these aren't present.
 
 * ```VERBOSE_LOGS```: true if present; this will force the server to verbosely log requests and header modifications
 * ```OVERWRITE_EXISTING```: true if present; this will set headers from ```forced-headers.json``` even if the response already contains the same header
-* ```REMOTE_FORCED_HEADERS```: a URL to a remote ```forced-headers.json``` file, which will take priority over the local ```forced-headers.json``` file and be loaded at run-time
+* ```REMOTE_FORCED_HEADERS```: a URL to a remote ```forced-headers.json``` file, which will take priority over the local ```forced-headers.json``` file and be loaded at run-time. The server will ignore this value if it contains an empty string.
 
 #### Forced headers
 

@@ -18,8 +18,8 @@
 			"value": ""
 		},
 		"REMOTE_FORCED_HEADERS": {
-			"description": "(Optional) A url to an externally-hosted forced-headers.json file",
-			"value": null,
+			"description": "(Optional) A url to an externally-hosted forced-headers.json file. Leave this blank to use the file in the project root.",
+			"value": "",
 			"required": false
 		}
 	}
