@@ -8,7 +8,7 @@ if (!process.env.PORT){
 }
 
 console.log("");
-console.log("cast-aws-proxy starting up...");
+console.log("[init] cast-aws-proxy starting up...");
 
 var http			= require("http");
 var express			= require("express");
@@ -20,9 +20,14 @@ var forceOverwite	= process.env.OVERWRITE_EXISTING ? true : false;
 var forcedHeaders	= require("./forced-headers.json");
 var verboseLogging	= process.env.VERBOSE_LOGS ? true : false;
 
-console.log("CONFIG: forced headers: " + JSON.stringify(forcedHeaders));
-console.log("CONFIG: overwrite existing headers: " + forceOverwite);
-console.log("CONFIG: verbose logging: " + verboseLogging);
+if (!targetURI){
+	console.log("[error] no ORIGIN_URI present");
+	process.exit(1);
+}
+
+console.log("[config] forced headers: " + JSON.stringify(forcedHeaders));
+console.log("[config] overwrite existing headers: " + forceOverwite);
+console.log("[config] verbose logging: " + verboseLogging);
 
 app.get("*", function (req, res) {
 	verboseLog("[" + req.url + "] proxying request to " + targetURI + req.url);
@@ -47,5 +52,5 @@ function verboseLog(log){
 	console.log(log);
 }
 
-console.log("proxying requests at port " + process.env.PORT + " to " + targetURI);
+console.log("[init] proxying requests at port " + process.env.PORT + " to " + targetURI);
 var server = app.listen(process.env.PORT);

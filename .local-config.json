@@ -1,6 +1,0 @@
-{
-	"ORIGIN_URI": "https://s3.amazonaws.com/cast-cache",
-	"VERBOSE_LOGS": "yeah",
-	"OVERWRITE_EXISTING": "yeah",
-	"PORT": 3000
-}
