@@ -3,8 +3,13 @@
 // julian lepinski 2015
 
 if (!process.env.PORT){
-	var localConfig = require("./.local-config.json");
-	for (var i in localConfig) process.env[i] = localConfig[i];
+	try {
+		var localConfig = require("./.local-config.json");
+		for (var i in localConfig) process.env[i] = localConfig[i];
+	} catch (e) {
+		console.log("[error] no process.env.PORT or .local-config.json found; if you're running locally this app needs some config vars");
+		process.exit(1);
+	}
 }
 
 console.log("");

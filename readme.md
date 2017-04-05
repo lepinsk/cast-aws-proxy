@@ -44,6 +44,17 @@ The server definitely won't start if these aren't present.
 }
 ```
 
+### ```.local-config.json```
+
+If you'd like to store your env vars in a file locally, the server will attempt to load them from ```.local-config.json``` if it doesn't find a ```PORT``` environment variable. Here's a sample of what this file might look like:
+
+```js
+{
+	"ORIGIN_URI": "https://s3.amazonaws.com/your-s3-bucket",
+	"PORT": 3000
+}
+```
+
 By default the server will load these values from the ```forced-headers.json``` file found in the project root. If you'd like to host this file elsewhere (useful for a one-click deploy on Heroku), add a ```REMOTE_FORCED_HEADERS``` environment variable that contains a URL to your remote headers file.
 
 ## Credits
