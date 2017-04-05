@@ -1,0 +1,21 @@
+{
+	"name": "Cast AWS Proxy",
+	"description": "A tiny proxy server to stick between Cloudfront and S3",
+	"repository": "https://github.com/lepinsk/cast-aws-proxy",
+	"keywords": [
+					"aws", 
+					"cloudfront",
+					"proxy"
+				],
+	"buildpacks": [
+					{
+						"url": "heroku/nodejs"
+					}
+  				],
+	"env": {
+		"ORIGIN_URI": {
+			"description": "The origin your Cloudfront requests should be made against (likely your S3 bucket URL)",
+			"value": ""
+		}
+	}
+}
