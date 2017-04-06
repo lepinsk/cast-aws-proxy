@@ -2,7 +2,7 @@
 
 ## What.
 
-CloudFront caches the first reponse it gets when it gets a cache miss. This is [problematic](https://forums.aws.amazon.com/thread.jspa?messageID=555417#555417) with CORS, because the first request may be missing the ```Origin``` header, which would cause CloudFront to cache a response that has no ```Access-Control-Allow-Origin``` header. This is a [known issue](http://stackoverflow.com/a/21371500/903936), and the suggested fix is to run a server like this one right here.
+CloudFront caches the first reponse it gets when it gets a cache miss. This is [problematic](https://forums.aws.amazon.com/thread.jspa?messageID=555417#555417) with CORS, because the first request may be missing the ```Origin``` header, which would cause CloudFront to cache a response that has no ```Access-Control-Allow-Origin``` header. This is a [known issue](http://stackoverflow.com/a/21371500/903936), and the suggested fix is to run a server like this one right here. (Edit: You may also find that CloudFront's [forward custom headers](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html) feature helps here.)
 
 **cast-aws-proxy** is a tiny middleware proxy server that runs in between CloudFront and your origin (probably S3?) and can forcibly add these headers to *every* response, ensuring the CloudFront cache has the headers you need it to have.
 
