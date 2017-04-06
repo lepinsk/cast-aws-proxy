@@ -2,6 +2,7 @@
 	"name": "Cast AWS Proxy",
 	"description": "A tiny proxy server to stick between Cloudfront and S3",
 	"repository": "https://github.com/lepinsk/cast-aws-proxy",
+	"logo": "https://github.com/lepinsk/cast-aws-proxy/raw/master/powered-by-cast.jpg",
 	"keywords": [
 					"aws", 
 					"cloudfront",
