@@ -1,6 +1,6 @@
 {
   "name": "cast-aws-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tiny proxy server to stick between cloudfront and s3",
   "main": "main.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "request": "2.60.0"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.7.x"
+    "node": "4.8.x",
+    "npm": "2.15.x"
   },
   "repository": {
     "type": "git",
