@@ -57,6 +57,14 @@ If you'd like to store your env vars in a file locally, the server will attempt 
 
 By default the server will load these values from the ```forced-headers.json``` file found in the project root. If you'd like to host this file elsewhere (useful for a one-click deploy on Heroku), add a ```REMOTE_FORCED_HEADERS``` environment variable that contains a URL to your remote headers file.
 
+## Tests
+
+Run:
+
+```bash
+$ npm test
+```
+
 ## Credits
 
 This project was built as part of [Cast](https://tryca.st/?ref=castawsproxy), a platform that makes it easy and fun to record, edit and publish podcasts from your browser.

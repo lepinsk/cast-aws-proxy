@@ -4,7 +4,7 @@
   "description": "a tiny proxy server to stick between cloudfront and s3",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"aw yeah tests look great my dude\" && exit 0"
+    "test": "mocha --require should --ui bdd"
   },
   "author": "Julian Lepinski",
   "license": "MIT",
@@ -13,11 +13,18 @@
     "request": "2.60.0"
   },
   "engines": {
-    "node": "4.8.x",
+    "node": "^4.8.4",
     "npm": "2.15.x"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:lepinsk/cast-aws-proxy.git"
+  },
+  "devDependencies": {
+    "mocha": "4.0.1",
+    "rewire": "3.0.2",
+    "should": "13.1.3",
+    "sinon": "4.1.2",
+    "supertest": "3.0.0"
   }
 }
